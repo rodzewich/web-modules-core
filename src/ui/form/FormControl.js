@@ -41,7 +41,7 @@ export class FormControl extends React.Component {
     }
 
     outputConverter(e) {
-        return e.target.value;
+        return (e.target ? e.target.value : e);
     }
 
     inputConverter(value) {

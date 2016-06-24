@@ -37,6 +37,7 @@ $btn-border-radius-base: 2px !default;
 
 // Popup
 $modal-lg: 1000px !default;
+$modal-md: 750px !default;
 $modal-sm: 500px !default;
 
 // Alert
@@ -51,6 +52,9 @@ $table-cell-padding: 8px !default;
 $gridCellPaddingHorizontal: $table-cell-padding;
 $gridCellPaddingVertical: ($table-cell-padding * 1.5);
 
+// Media
+
+$mediaIconFontSize: 50px !default;
 
 // Original Bootstrap Vars & Mixins
 

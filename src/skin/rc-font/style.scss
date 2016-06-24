@@ -325,6 +325,11 @@
         content: $rc-icon-phone;
     }
 }
+.rc-icon-phone2 {
+    &:before {
+        content: $rc-icon-phone2;
+    }
+}
 .rc-icon-more-information {
     &:before {
         content: $rc-icon-more-information;
@@ -435,6 +440,11 @@
         content: $rc-icon-back;
     }
 }
+.rc-icon-next {
+    &:before {
+        content: $rc-icon-next;
+    }
+}
 .rc-icon-checkbox-unselected {
     &:before {
         content: $rc-icon-checkbox-unselected;
@@ -535,4 +545,8 @@
         content: $rc-icon-not-activated;
     }
 }
-
+.rc-icon-meetings-settings {
+    &:before {
+        content: $rc-icon-meetings-settings;
+    }
+}

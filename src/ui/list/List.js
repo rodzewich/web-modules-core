@@ -105,10 +105,14 @@ export class List extends React.Component {
             var isInsideStopper = false;
             var currentNode = event.target;
             var rootNode = event.currentTarget;
+            var stopperAttribute;
 
             while (currentNode && currentNode !== rootNode) {
-                //TODO fix dataset for IE9
-                isInsideStopper = currentNode.dataset.stopRowClick == 'true';
+                stopperAttribute = currentNode.dataset
+                    ? currentNode.dataset.stopRowClick
+                    : currentNode.getAttribute('data-stop-row-click'); // for IE <= 10
+
+                isInsideStopper = stopperAttribute == 'true';
                 if (isInsideStopper) {
                     break;
                 } else {

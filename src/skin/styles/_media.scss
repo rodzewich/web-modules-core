@@ -1,0 +1,15 @@
+@import "../variables/dimensions";
+@import "../variables/colors";
+@import "./button";
+
+.rc-media-clickable {
+  @include rc-button-variant($mediaDefaultColor, $btn-default-bg, $btn-default-border, $btn-default-color-hover, $btn-default-bg-hover, $btn-default-border-hover);
+  cursor: pointer;
+  padding: $grid-gutter-width;
+  padding-bottom: 0;
+
+  .rc-icon {
+    font-size: $mediaIconFontSize;
+    line-height: 1;
+  }
+}

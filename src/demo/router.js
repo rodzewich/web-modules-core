@@ -5,6 +5,7 @@ import Panels from "./pages/panels";
 import Popups from "./pages/popups";
 import Buttons from "./pages/buttons";
 import Graphs from "./pages/graphs";
+import Dropdowns from './pages/dropdowns';
 import Forms from "./pages/forms";
 
 let {Router, Route, IndexRoute} = ReactRouter;
@@ -17,5 +18,6 @@ export default <Router history={getSilentRouterHistory()}>
         <Route path="buttons" component={Buttons}/>
         <Route path="graphs" component={Graphs}/>
         <Route path="forms" component={Forms}/>
+        <Route path="dropdowns" component={Dropdowns} />
     </Route>
 </Router>;

@@ -26,7 +26,7 @@ export class CheckboxControl extends FormControl {
         return e.target.checked;
     }
 
-    getInputDOMNode(){
+    getInputDOMNode() {
         return this.input;
     }
 
@@ -39,12 +39,20 @@ export class CheckboxControl extends FormControl {
     }
 
     render() {
-        var {checked, readOnly, disabled, children, ...props} = this.getPropsFromContext();
-        return (<Checkbox
-            disabled={readOnly || disabled}
-            checked={checked}
-            inputRef={(input) => this.input = input}
-            {...props}
-        >{children}</Checkbox>);
+
+        var {testAutomationId, checked, readOnly, disabled, children, ...props} = this.getPropsFromContext();
+
+        return (
+            <Checkbox
+                disabled={readOnly || disabled}
+                checked={checked}
+                inputRef={(input) => this.input = input}
+                data-test-automation-id={testAutomationId}
+                {...props}
+            >
+                {children}
+            </Checkbox>
+        );
+
     }
 }

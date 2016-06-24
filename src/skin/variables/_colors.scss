@@ -203,9 +203,19 @@ $input-border-focus: lighten($primaryColor, 40%) !default;
 $state-danger-text: $dangerColor !default;
 
 // Dropdowns
-$dropdown-link-color: $primaryColor !default;
+$dropdown-link-color: $darkGrayColor !default;
 $dropdown-link-hover-color: $primaryColor !default;
+$dropdown-link-hover-bg:$lightestGrayColor !default;
 $dropdown-link-active-color: $primaryColor !default;
+$dropdown-link-active-bg: $lightestGrayColor !default;
+
+
+    // RegularSelect
+$dropdown-filter-wrapper-bg-color: $lightestGrayColor !default;
+$dropdown-filter-wrapper-border-color: $mediumGrayColor !default;
 
 // HeaderIcon
 $header-icon-background-color: #eee !default;
+
+// Media
+$mediaDefaultColor: $blackColor !default;

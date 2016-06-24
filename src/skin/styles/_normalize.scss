@@ -1,3 +1,6 @@
+@import "../variables/dimensions";
+@import "../variables/colors";
+
 & {
     white-space: normal;
     font: normal $font-size-base Helvetica, Calibri, Myriad, 'Lucida Sans', Arial, sans-serif;
@@ -70,3 +73,13 @@ hr {
     font-weight: 100;
     font-family: sans-serif;
 }
+.dropup,
+.dropdown{
+    .dropdown-menu {
+        padding: 0;
+        li > a {
+            padding: $grid-gutter-width;
+        }
+    }
+}
+

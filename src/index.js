@@ -4,8 +4,10 @@
 export var React = require('react');
 export var ReactDOM = require('react-dom');
 export var ReactRouter = require('react-router');
+export var ReactVis = require('react-vis');
 export var ReactRouterBootstrap = require('react-router-bootstrap');
 export var History = require('history');
+export var SDK = require('ringcentral');
 
 // Polyfills
 var Promise = require('bluebird');
@@ -19,18 +21,11 @@ if (typeof Array.prototype.findIndex !== 'function') {
 }
 
 import * as Constants from "./utils/Constants";
-import {Pagination} from "./ui/Pagination";
-import {HeaderToolbar} from "./ui/HeaderToolbar";
-import {StoreSelectedRecordsSwitcher} from "./ui/StoreSelectedRecordsSwitcher";
-import {Note} from "./ui/Note";
-import {StoreCounterText} from "./ui/StoreCounterText";
-import {SelectedRecordsSwitcher} from "./ui/SelectedRecordsSwitcher";
-import {List} from "./ui/list/List";
-import {WizardStep} from "./ui/WizardStep";
-import {Alert} from "./ui/popups/Alert";
-import {Confirm} from "./ui/popups/Confirm";
-import * as ReactVis from "react-vis";
-export {ReactVis};
+import {localize} from "./ui/functions";
+import {getConfig, setup} from "./utils/functions";
+
+// Functions
+export {Constants as Constants, localize, setup, getConfig};
 
 // Utils
 export var formatMessage = require('format-message');
@@ -59,6 +54,10 @@ export {default as StaticControl} from "react-bootstrap/lib/FormControlStatic";
 export {default as BootstrapAlert} from 'react-bootstrap/lib/Alert';
 export {default as ControlLabel} from 'react-bootstrap/lib/ControlLabel';
 export {default as HelpBlock} from 'react-bootstrap/lib/HelpBlock';
+export {default as InputGroup} from 'react-bootstrap/lib/InputGroup';
+export {default as InputGroupAddon} from 'react-bootstrap/lib/InputGroupAddon';
+export {default as InputGroupButton} from 'react-bootstrap/lib/InputGroupButton';
+export {default as Media} from 'react-bootstrap/lib/Media';
 
 // Utils
 export {default as EventBus} from './utils/EventBus';
@@ -67,7 +66,6 @@ export {default as BrandedFileLoader} from './utils/BrandedFileLoader';
 
 export {
     translate,
-    setup,
     getSilentRouterHistory,
     setDocumentTitle,
     CurrentUser,
@@ -84,8 +82,7 @@ export {
     OS,
     fillBrandName,
     extendFormState,
-    cleanFormState,
-    getConfig
+    cleanFormState
 } from "./utils/functions";
 
 export {
@@ -96,22 +93,6 @@ export {
 } from "./ui/functions";
 
 export {isSelectedRow} from './ui/list/utils';
-
-// We mangle with these components in localize() function
-
-export {
-    Constants,
-    Pagination,
-    HeaderToolbar,
-    StoreSelectedRecordsSwitcher,
-    Note,
-    StoreCounterText,
-    SelectedRecordsSwitcher,
-    List,
-    WizardStep,
-    Alert,
-    Confirm
-};
 
 // Deprecated components !!!
 export {ListCheckbox} from './ui/list/ListCheckbox';
@@ -141,6 +122,7 @@ export {CheckboxControl} from './ui/form/CheckboxControl';
 export {RadioControl} from './ui/form/RadioControl';
 export {SelectControl} from './ui/form/SelectControl';
 export {MultiSelect} from './ui/form/MultiSelect';
+export {RegularSelect} from './ui/form/RegularSelect';
 export {Translate} from './ui/Translate';
 export {ListControlCheckbox} from './ui/list/ListControlCheckbox';
 export {ListHighlight} from './ui/list/ListHighlight';
@@ -160,30 +142,64 @@ export {Tooltip} from './ui/Tooltip';
 export {BorderedList, BorderedListItem} from './ui/BorderedList';
 export {BrandedImage} from './ui/BrandedImage';
 export {MoreButton} from './ui/MoreButton';
+export {Pagination} from "./ui/Pagination";
+export {HeaderToolbar} from "./ui/HeaderToolbar";
+export {StoreSelectedRecordsSwitcher} from "./ui/StoreSelectedRecordsSwitcher";
+export {Note} from "./ui/Note";
+export {StoreCounterText} from "./ui/StoreCounterText";
+export {SelectedRecordsSwitcher} from "./ui/SelectedRecordsSwitcher";
+export {List} from "./ui/list/List";
+export {WizardStep} from "./ui/WizardStep";
+export {Alert} from "./ui/popups/Alert";
+export {Confirm} from "./ui/popups/Confirm";
 
-/**
- * FIXME Add others
- * @param strings
- */
-export function localize(strings) {
-    Pagination.defaultProps.allText = strings.ALL;
-    Pagination.defaultProps.pageSizeSelectorText = strings.SIZE_SELECTOR;
-    HeaderToolbar.defaultProps.backText = strings.BACK;
-    Note.defaultProps.noteText = strings.NOTE;
-    SelectedRecordsSwitcher.defaultProps.showAllText = strings.SHOW_ALL;
-    SelectedRecordsSwitcher.defaultProps.showSelectedText = strings.SHOW_SELECTED;
-    StoreCounterText.defaultProps.template = strings.TOTAL_AMOUNT;
-    StoreSelectedRecordsSwitcher.defaultProps.template = strings.TOTAL_ITEMS_AMOUNT;
-    StoreSelectedRecordsSwitcher.defaultProps.showAlltext = strings.SHOW_ALL;
-    StoreSelectedRecordsSwitcher.defaultProps.showSelectedtext = strings.SHOW_SELECTED;
-    WizardStep.defaultProps.backText = strings.BACK;
-    WizardStep.defaultProps.nextText = strings.NEXT;
-    WizardStep.defaultProps.cancelText = strings.CANCEL;
-    List.defaultProps.noResultsText = strings.NO_RESULTS;
-    List.defaultProps.blockedText = strings.PLEASE_WAIT_WHILE_LOADING;
-    Alert.defaultProps.title = strings.ALERT;
-    Alert.defaultProps.submitText = strings.OK;
-    Confirm.defaultProps.title = strings.CONFIRMATION;
-    Confirm.defaultProps.submitText = strings.YES;
-    Confirm.defaultProps.cancelText = strings.NO;
+var showLoader = function() {};
+var hideLoader = function() {};
+
+export function loadPackage(modules, callback, errback) {
+
+    if (!Array.isArray(modules)) modules = [modules];
+
+    showLoader();
+
+    // guard against Webpack context parser
+    window['require'](modules.map(function(p) {
+        return (p.indexOf('app/') != -1 && p.indexOf('/index') != -1) ? p : 'app/' + p + '/index'; //TODO Make app prefix configurable
+    }), function() {
+        hideLoader();
+        callback.apply(null, arguments);
+    }, function() {
+        hideLoader();
+
+        if (errback) {
+            errback.apply(null, arguments);
+        } else {
+            if (arguments[0] && arguments[0].stack) console.error(arguments[0].stack);
+            console.error(arguments);
+        }
+    });
+
+}
+
+export function bootstrap(options) {
+
+    showLoader = options.showLoader || showLoader;
+    hideLoader = options.hideLoader || hideLoader;
+
+    setup(options.config, options.locale);
+
+    loadPackage(['app/lang/common/index-en_US'], function(langCommon) {
+
+        localize(langCommon);
+
+        loadPackage(['app/core/all/index-' + getConfig().brandId], options.done, function() { //TODO Allow to force certain brand
+
+            console.warn('Skin for', getConfig().brandId, 'cannot be loaded, fallback to default');
+
+            loadPackage(['app/core/all/index-default'], options.done);
+
+        });
+
+    });
+
 }

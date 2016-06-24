@@ -30,6 +30,11 @@
                     padding-right: $default-padding;
                 }
             }
+            &.cursor-pointer {
+                [data-stop-row-click] {
+                    cursor: default;
+                }
+            }
         }
     }
 

@@ -17,14 +17,18 @@ export class TextAreaControl extends FormControl {
     };
 
     render() {
-        var props = this.getPropsFromContext();
+        
+        let {testAutomationId, maxLength, ...props} = this.getPropsFromContext();
+        
         return (props.readOnly
-                ? <Static ref="input" {...props}>{props.value}</Static>
+                ? <Static ref="input" {...props} data-test-automation-id={testAutomationId}>{props.value}</Static>
                 : <BSFormControl
                     {...props}
+                    data-test-automation-id={testAutomationId}
                     ref="input"
                     type="textarea"
-                    maxLength={this.props.maxLength}/>
+                    maxLength={maxLength}/>
         );
+        
     }
 }

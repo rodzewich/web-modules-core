@@ -17,14 +17,19 @@ export class TextInputControl extends FormControl {
     };
 
     render() {
-        let {type, ...props} = this.getPropsFromContext();
+
+        let {type, testAutomationId, ...props} = this.getPropsFromContext();
+
         type = type || 'text';
+
         return (props.readOnly
-                ? <Static ref="input" {...props}>{props.value}</Static>
+                ? <Static ref="input" {...props} data-test-automation-id={testAutomationId}>{props.value}</Static>
                 : <BSFormControl
                     {...props}
+                    data-test-automation-id={testAutomationId}
                     type={type}
                     ref="input"/>
         );
+
     }
 }

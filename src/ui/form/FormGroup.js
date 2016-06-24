@@ -17,6 +17,10 @@ export class FormGroup extends FormControl {
         return this.refs.control.getInputDOMNode();
     }
 
+    controlLabelFallback() {
+        return true;
+    }
+
     render() {
 
         let {
@@ -31,22 +35,18 @@ export class FormGroup extends FormControl {
             groupClassName,
             disabled,
             readOnly,
-            props // properly handle old-style props
+            ...props // properly handle old-style props
         } = this.getPropsFromContext();
 
         if (!validationState && bsStyle) {
             validationState = bsStyle;
         }
 
-        if (!controlId) {
-            controlId = this.props.testAutomationId;
-        }
-
         if (this.constructor.defaultProps.testAutomationId == 'radio' || this.constructor.defaultProps.testAutomationId == 'checkbox') {
             label = null;
         }
 
-        if (!controlLabel && label) {
+        if (!controlLabel && label && this.controlLabelFallback()) {
             controlLabel = label;
         }
 

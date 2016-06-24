@@ -164,3 +164,52 @@ $multiSelectBaseLeftGutter: $grid-gutter-width * 3;
         }
     }
 }
+
+.rc-select{
+    .dropdown-toggle {
+        &.btn-block {
+            text-align: left;
+        }
+    }
+
+    .dropdown-menu {
+        .filter-wrapper{
+            padding: $grid-gutter-width;
+            background-color: $dropdown-filter-wrapper-bg-color;
+            border-bottom: 1px solid $dropdown-filter-wrapper-border-color;
+
+            .form-group{
+                margin-bottom: 0;
+            }
+        }
+
+        .filter-empty-message{
+            padding: $grid-gutter-width;
+        }
+    }
+
+    .rc-select-option{
+        a{
+            display: block;
+            color: $dropdown-link-color;
+            text-decoration: none;
+
+            &:hover{
+                color: $dropdown-link-hover-color;
+                text-decoration: none;
+                background-color: $dropdown-link-hover-bg;
+            }
+        }
+
+        &.active{
+            a{
+                background-color: $dropdown-link-active-bg;
+                color: $dropdown-link-active-color;
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

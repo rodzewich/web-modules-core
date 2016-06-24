@@ -142,14 +142,14 @@ export default class Panels extends React.Component {
 
                 <hr/>
 
-                <Input label="Vertical group of radios">
-                    <RadioControl>Auto-Receptionist</RadioControl>
-                    <RadioControl><div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div></RadioControl>
+                <Input label="Vertical group of radios (control)">
+                    <div><RadioControl>Auto-Receptionist</RadioControl></div>
+                    <div><RadioControl><div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div></RadioControl></div>
                 </Input>
 
                 <hr/>
 
-                <Input label="Vertical group of radios">
+                <Input label="Group of inline radios">
                     <RadioControl inline>Auto-Receptionist</RadioControl>
                     <RadioControl inline><div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div></RadioControl>
                 </Input>

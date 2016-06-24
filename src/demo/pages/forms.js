@@ -14,6 +14,9 @@ import {
     Row,
     Col,
     Block,
+    InputGroup,
+    DropdownButton,
+    MenuItem,
     validator
 } from "../../index";
 
@@ -69,13 +72,15 @@ export default class Forms extends React.Component {
 
                 <Form value={this.state.form} errors={this.state.errors} onChange={this.onFormChange}>
 
-                    <TextInput name="firstName" label="First Name (as password)" type="password" />
-                    <TextInput name="firstName" label="First Name (readonly)" readOnly />
+                    <TextInput name="firstName" label="First Name (as password)" type="password" controlId="password"/>
+                    <TextInput name="firstName" label="First Name (readonly)" readOnly/>
                     <TextInput name="firstName" label="First Name" ref="firstName"/>
                     <TextInput name="lastName" label="Last Name"/>
                     <TextInput name="email" label="Email"/>
-                    <Radio name="radio" label="Radio 1" value="1"/>
-                    <Radio name="radio" label="Radio 2" value="2"/>
+                    <Radio name="radio" label="Auto Receptionist" value="1"/>
+                    <Radio name="radio" label={<div><Block condensed>Extension:</Block>
+                                                <Block condensed>Admin User, Ext. 101</Block>
+                                                <Button>Select Extension</Button></div>} value="2"/>
                     <Checkbox name="checkbox1" label="Checkbox 1"/>
                     <Checkbox name="checkbox2" label="Checkbox 2"/>
                     <MultiSelect name="multiselect" label="MultiSelect" id="foo" ref="multiselect">
@@ -104,7 +109,9 @@ export default class Forms extends React.Component {
                     <FormGroup label="Vertical group of radios">
                         <RadioControl>Auto-Receptionist</RadioControl>
                         <RadioControl>
-                            <div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div>
+                            <Block condensed>Extension:</Block>
+                            <Block condensed>Admin User, Ext. 101</Block>
+                            <Button>Select Extension</Button>
                         </RadioControl>
                     </FormGroup>
 
@@ -124,6 +131,26 @@ export default class Forms extends React.Component {
                             <Col xs={2}><TextInputControl name="firstName" placeholder="First Name"/></Col>
                             <Col xs={2}><TextInputControl name="lastName" placeholder="Last Name"/></Col>
                         </Row>
+                    </FormGroup>
+
+                    <h1>Dropdown addon</h1>
+
+                    <FormGroup label="Vertical group of radios">
+                        <InputGroup style={{width: '200px'}}>
+                            <TextInputControl name="firstName"/>
+                            <DropdownButton
+                                componentClass={InputGroup.Button}
+                                id="input-dropdown-addon"
+                                title="Action">
+                                <MenuItem key="1">Item</MenuItem>
+                            </DropdownButton>
+                        </InputGroup>
+                    </FormGroup>
+
+                    <h1>Field with select button</h1>
+                    <FormGroup label="Extension">
+                        <Block condensed>Admin User, Ext. 101</Block>
+                        <Button>Select Extension</Button>
                     </FormGroup>
 
                 </Form>

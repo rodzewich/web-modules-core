@@ -22,15 +22,19 @@ export class RadioControl extends FormControl {
     }
 
     render() {
-        var {children, ...props} = this.getPropsFromContext();
+
+        let {testAutomationId, children, ...props} = this.getPropsFromContext();
+
         return (
             <Radio
                 {...props}
                 ref="input"
                 type="radio"
+                data-test-automation-id={testAutomationId}
             >
                 {children}
             </Radio>
         );
+        
     }
 }

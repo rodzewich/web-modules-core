@@ -1,6 +1,10 @@
+@import "../variables/dimensions";
+@import "../variables/colors";
+
 .btn {
     display: inline-block;
     font-size: $font-size-base;
+    line-height: $line-height-base + 0.04; // 13px rounding error correction
     > .rc-icon {
         margin-right: $grid-gutter-width / 2
     }

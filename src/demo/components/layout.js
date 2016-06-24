@@ -1,6 +1,6 @@
 import {React, Menu, Row, Col, Icon, OverlayTrigger, Tooltip} from "../../index";
 
-const tooltip = <Tooltip>Also includes layout demos</Tooltip>;
+const tooltip = <Tooltip id="layout-tooltip">Also includes layout demos</Tooltip>;
 
 const menus = [
     {
@@ -21,6 +21,11 @@ const menus = [
     {
         link: '/graphs',
         name: <span>Graphs</span>,
+        icon: 'templates'
+    },
+    {
+        link: '/dropdowns',
+        name: <span>Dropdowns</span>,
         icon: 'templates'
     },
     {

@@ -12,6 +12,7 @@
 
     var webpack = require('webpack'),
         path = require('path'),
+        utils = require('./webpack.utils'),
         host = 'localhost',
         port = 5000,
         server = 'http://' + host + ':' + port,
@@ -49,19 +50,8 @@
         ]).concat([
             new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/) // prevents moment from loading all locales
         ]),
-        resolve: {
-            extensions: ['', '.json', '.js', '.css', '.less']
-        },
-        module: {
-            loaders: [
-                {test: /\.js$/, loader: 'babel?cacheDirectory', exclude: /node_modules/},
-                {test: /\.json$/, loader: 'json'},
-                {test: /\.css$/, loader: 'style!css'},
-                {test: /\.(?:scss|sass)$/, loader: 'style!css!sass?relative_assets=true'},
-                {test: /\.(?:png|jpg|jpeg|gif)/, loader: 'url?limit=10000'}, //TODO Handle woff?foo
-                {test: /\.(?:woff|woff2|otf|svg|ttf|eot)/, loader: 'file'}
-            ]
-        },
+        resolve: utils.resolve,
+        module: utils.module,
         devServer: {
             contentBase: '.',
             port: port,

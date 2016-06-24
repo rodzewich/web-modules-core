@@ -15,18 +15,21 @@ export class SelectControl extends FormControl {
     };
 
     render() {
-        var props = this.getPropsFromContext();
-
+        
+        let {testAutomationId, children, ...props} = this.getPropsFromContext();
+        
         return (
             <span className="rc-select">
                 <BSFormControl
                     componentClass="select"
+                    data-test-automation-id={testAutomationId}
                     {...props}
                     ref="input"
                 >
-                    {this.props.children}
+                    {children}
                 </BSFormControl>
             </span>
         );
+        
     }
 }
