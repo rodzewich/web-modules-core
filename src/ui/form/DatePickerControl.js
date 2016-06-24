@@ -3,6 +3,7 @@
 import React from 'react';
 import {FormControl} from './FormControl';
 import {default as BSFormControl} from 'react-bootstrap-datetimepicker';
+require('react-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css');
 
 export class DatePickerControl extends FormControl {
 
