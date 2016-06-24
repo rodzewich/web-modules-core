@@ -1,0 +1,211 @@
+// Brand colors
+
+$primaryColor: #0d3f61 !default;
+$primaryColorAlt: darken($primaryColor, 15%) !default;
+$accentColor: #ff8800 !default;
+$accentColorAlt: darken($accentColor, 15%) !default;
+
+// Secondary colors
+
+$secondaryColor: #d1e2ed !default;
+$secondaryColorAlt: #b8cfde !default;
+$successColor: #5fb95c !default;
+$successColorAlt: darken($successColor, 15%) !default;
+$dangerColor: #f95b5c !default;
+$dangerColorAlt: darken($dangerColor, 15%) !default;
+$warningColor: #fcf8e3 !default;
+$warningColorAlt: darken($warningColor, 15%) !default; //faebcc
+
+// Neutral colors
+
+$blackColor: #2f2f2f !default;
+$darkGrayColor: #666666 !default;
+$mediumGrayColor: #c8ccd1 !default;
+$lightGrayColor: #e2e6e9 !default;
+$lightestGrayColor: #f9f9f9 !default;
+$whiteColor: #ffffff !default;
+
+// Custom Controls
+$customControlsColor: $primaryColor !default;
+$customControlsColorHover: $primaryColor !default;
+$customControlsColorDisabled: $mediumGrayColor !default;
+$customControlsOutline: $secondaryColorAlt !default;
+$customControlsDisabledColor: $mediumGrayColor !default;
+
+// Menu
+$menuBackgroundColor: $secondaryColor !default;
+$menuLinkColor: $primaryColor !default;
+$menuIconColor: $primaryColor !default;
+$menuActiveLinkBackgroundColor: $secondaryColorAlt !default;
+$menuActiveLinkColor: $primaryColor !default;
+$menuActiveIconColor: $primaryColor !default;
+$menuBorderLeftColor: $primaryColor !default;
+
+// Menu Sub
+$menuSubBackgroundColor: transparent !default;
+$menuSubLinkColor: $primaryColor !default;
+$menuSubIconColor: $primaryColor !default;
+$menuSubActiveLinkBackgroundColor: $secondaryColor !default;
+$menuSubActiveLinkColor: $primaryColor !default;
+$menuSubActiveIconColor: $primaryColor !default;
+$menuSubHoverLinkBackgroundColor: $secondaryColorAlt !default;
+$menuSubHoverLinkColor: $primaryColor !default;
+$menuSubHoverIconColor: $primaryColor !default;
+
+// Pagination
+$paginationActiveBackground: $lightGrayColor !default;
+$paginationActiveColor: $blackColor !default;
+
+// Checkbox Group
+$checkboxGroupHeaderBorderColor: $lightGrayColor !default;
+
+// External
+$externalDeviceOrdersManagementBackground: $whiteColor !default;
+
+// Grid
+$gridHeaderSortBackground: $lightestGrayColor !default;
+
+// Grid Row Actions
+$gridRowActionColor: $mediumGrayColor !default;
+$gridRowActionSeparatorColor: $mediumGrayColor !default;
+$gridRowActionHoverColor: $primaryColor !default;
+$gridRowActionSeparatorHoverColor: $primaryColor !default;
+
+// Icons
+$iconExtensionEnabled: $successColor !default;
+$iconExtensionDisabled: $dangerColor !default;
+$iconExtensionNotActivated: $darkGrayColor !default;
+$iconExtensionFreezed: $darkGrayColor !default;
+$iconPhoneOnline: $successColor !default;
+$iconPhoneOffline: $dangerColor !default;
+$iconPhoneInUse: $dangerColor !default;
+$iconPhoneFree: $successColor !default;
+$iconPhoneOrderInProgress: $darkGrayColor !default;
+
+// Modal
+$modalHeaderBackground: $lightestGrayColor !default;
+
+// Block
+$blockBorderColor: $mediumGrayColor !default;
+
+// Bordered List
+$borderedListBorderColor: $mediumGrayColor !default;
+$borderedListItemBackgroundColor: $lightestGrayColor !default;
+
+// Store Selected Records
+$storeSelectedRecordsInactiveColor: $darkGrayColor !default;
+
+// Normalize
+$headerColor: $blackColor !default;
+
+// CTA link buttons
+$ctaLinkColor: $primaryColor !default;
+$ctaLinkColorHover: $primaryColor !default;
+$ctaLinkDisabledColor: $mediumGrayColor !default;
+$ctaLinkDisabledColorHover: $mediumGrayColor !default;
+
+// Override Bootstrap variables
+// =============================================================================
+$brand-primary: $primaryColor !default;
+$brand-success: $successColor !default;
+$brand-warning: $warningColor !default;
+$brand-danger: $dangerColor !default;
+$text-muted: $darkGrayColor !default;
+$text-color: $blackColor !default;
+
+$gray-base: #000000 !default;
+$gray-darker: $blackColor !default;
+$gray-dark: $darkGrayColor !default;
+$gray: $mediumGrayColor !default;
+$gray-light: $lightGrayColor !default;
+$gray-lighter: $lightestGrayColor !default;
+
+$link-hover-color: $primaryColorAlt !default;
+
+$table-bg-hover: $lightestGrayColor !default;
+$table-border-color: $lightGrayColor !default;
+
+$panel-default-heading-bg: $lightestGrayColor !default;
+$panel-footer-bg: $whiteColor !default;
+$panel-inner-border: $lightGrayColor !default;
+$panel-default-border: $lightGrayColor !default;
+
+$modal-content-fallback-border-color: $lightGrayColor !default;
+$modal-content-border-color: $lightGrayColor !default;
+$modal-header-border-color: $lightGrayColor !default;
+$modal-footer-border-color: $lightGrayColor !default;
+
+$nav-tabs-border-color: $lightGrayColor !default;
+$nav-tabs-active-link-hover-color: $primaryColor !default;
+$nav-disabled-link-color: $darkGrayColor !default;
+$nav-disabled-link-hover-color: $darkGrayColor !default;
+
+$navbar-default-bg: $lightestGrayColor !default;
+$navbar-default-color: $darkGrayColor !default;
+$navbar-default-link-color: $primaryColor !default;
+$navbar-default-link-hover-color: $primaryColorAlt !default;
+$navbar-default-brand-color: $blackColor !default;
+$navbar-default-brand-hover-color: $blackColor !default;
+
+$tooltip-color: $blackColor !default;
+$tooltip-bg: $warningColor !default;
+$tooltip-arrow-color: $warningColor !default;
+
+$btn-default-color: $primaryColor !default;
+$btn-default-bg: $whiteColor !default;
+$btn-default-border: $mediumGrayColor !default;
+$btn-default-color-hover: $primaryColor !default;
+$btn-default-bg-hover: $secondaryColorAlt !default;
+$btn-default-border-hover: $secondaryColorAlt !default;
+
+$btn-primary-color: $whiteColor !default;
+$btn-primary-bg: $primaryColor !default;
+$btn-primary-border: $primaryColor !default;
+$btn-primary-color-hover: $whiteColor !default;
+$btn-primary-bg-hover: $primaryColorAlt !default;
+$btn-primary-border-hover: $primaryColorAlt !default;
+
+$btn-success-color: $whiteColor !default;
+$btn-success-bg: $dangerColor !default;
+$btn-success-border: $dangerColor !default;
+$btn-success-color-hover: $whiteColor !default;
+$btn-success-bg-hover: $dangerColorAlt !default;
+$btn-success-border-hover: $dangerColorAlt !default;
+
+$btn-danger-color: $whiteColor !default;
+$btn-danger-bg: $successColor !default;
+$btn-danger-border: $successColor !default;
+$btn-danger-color-hover: $whiteColor !default;
+$btn-danger-bg-hover: $successColorAlt !default;
+$btn-danger-border-hover: $successColorAlt !default;
+
+$btn-warning-color: $whiteColor !default;
+$btn-warning-bg: $warningColor !default;
+$btn-warning-border: $warningColor !default;
+$btn-warning-color-hover: $whiteColor !default;
+$btn-warning-bg-hover: $warningColorAlt !default;
+$btn-warning-border-hover: $warningColorAlt !default;
+
+$btn-disabled-color: $whiteColor !default;
+$btn-disabled-bg: $mediumGrayColor !default;
+$btn-disabled-border: $mediumGrayColor !default;
+
+$alert-warning-text: $darkGrayColor !default;
+
+$hr-border: $lightGrayColor !default;
+
+$input-border-radius: 2px !default;
+$input-border: $mediumGrayColor !default;
+$input-color: $darkGrayColor !default;
+$input-border-focus: lighten($primaryColor, 40%) !default;
+
+// Form states and alerts
+$state-danger-text: $dangerColor !default;
+
+// Dropdowns
+$dropdown-link-color: $primaryColor !default;
+$dropdown-link-hover-color: $primaryColor !default;
+$dropdown-link-active-color: $primaryColor !default;
+
+// HeaderIcon
+$header-icon-background-color: #eee !default;

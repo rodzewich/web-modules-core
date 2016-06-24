@@ -1,0 +1,30 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.rc-gridRowActions {
+    .btn {
+        text-decoration: none;
+        color: $gridRowActionColor;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        & + .btn:after {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 0;
+            bottom: 10%;
+            width: 1px;
+            background: $gridRowActionSeparatorColor;
+        }
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+}
+
+//Will be refactor by UIA-48722
+tr:hover .rc-gridRowActions .btn {
+    text-decoration: underline;
+    color: $primaryColor;
+}

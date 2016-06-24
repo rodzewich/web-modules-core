@@ -1,0 +1,153 @@
+.btn {
+    display: inline-block;
+    font-size: $font-size-base;
+    > .rc-icon {
+        margin-right: $grid-gutter-width / 2
+    }
+}
+
+// override bootstrap
+.btn-toolbar {
+    display: inline-block;
+    margin-left: -$grid-gutter-width; // Offset the first child's margin
+    > .btn,
+    > .btn-group,
+    > .input-group {
+        margin-left: $grid-gutter-width;
+    }
+    &.no-offset {
+        margin-left: 0;
+    }
+
+    // CTA link buttons
+    &.cta-toolbar {
+        .btn-link {
+            color: $ctaLinkColor;
+            &:hover,
+            &:focus {
+                color: $ctaLinkColorHover;
+            }
+            &[disabled] {
+                color: $ctaLinkDisabledColor;
+                &:hover,
+                &:focus {
+                    color: $ctaLinkDisabledColorHover;
+                }
+            }
+            &:not([disabled]) {
+                &:hover,
+                &:focus {
+                    span {
+                        &:not([class^="rc-icon"]) {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-link.disabled,
+.btn-link.rc-button-icon-only,
+.btn-link.rc-button-with-icon {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.btn-link {
+    &:focus,
+    &.focus {
+        outline: none;
+    }
+    &:active,
+    &.active {
+        outline: none;
+        &:hover,
+        &:focus,
+        &.focus {
+            outline: none;
+        }
+    }
+}
+
+.rc-button-icon-only .rc-icon {
+    margin: 0;
+}
+
+// Overrides of Bootstrap mixin
+
+@mixin rc-button-variant($color, $background, $border, $hoverColor, $hoverBackground, $hoverBorder) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+    outline: none;
+  }
+  &:hover {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $hoverColor;
+    background-color: $hoverBackground;
+    border-color: $hoverBorder;
+    box-shadow: none;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $hoverColor;
+      background-color: $hoverBackground;
+      border-color: $hoverBorder;
+      outline: none;
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+      background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background: $btn-disabled-bg;
+      border-color: $btn-disabled-border;
+      color: $btn-disabled-color;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+.btn-default {
+  @include rc-button-variant($btn-default-color, $btn-default-bg, $btn-default-border, $btn-default-color-hover, $btn-default-bg-hover, $btn-default-border-hover);
+}
+.btn-primary {
+  @include rc-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border, $btn-primary-color-hover, $btn-primary-bg-hover, $btn-primary-border-hover);
+}
+.btn-success {
+  @include rc-button-variant($btn-success-color, $btn-success-bg, $btn-success-border, $btn-success-color-hover, $btn-success-bg-hover, $btn-success-border-hover);
+}
+.btn-warning {
+  @include rc-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border, $btn-warning-color-hover, $btn-warning-bg-hover, $btn-warning-border-hover);
+}
+.btn-danger {
+  @include rc-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border, $btn-danger-color-hover, $btn-danger-bg-hover, $btn-danger-border-hover);
+}

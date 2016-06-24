@@ -1,0 +1,139 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+.table {
+    table-layout: fixed;
+    border-collapse: separate;
+    margin: 0;
+    border-bottom: 1px solid $table-border-color;
+    margin-bottom: -1px;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: $gridCellPaddingVertical $gridCellPaddingHorizontal;
+                vertical-align: top;
+
+                &.with-input {
+                    padding: $gridCellPaddingVertical/2 $gridCellPaddingHorizontal;
+                }
+
+                &:first-of-type {
+                    padding-left: $default-padding;
+                }
+
+                &:last-of-type {
+                    padding-right: $default-padding;
+                }
+            }
+        }
+    }
+
+    > thead > tr > th {
+        border-top: 1px solid transparent !important;
+        border-bottom: 1px solid transparent !important;
+        .checkbox{
+            label{
+                font-weight: inherit;
+    }
+        }
+    }
+
+    td {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        .grid-form-element {
+            margin-bottom: 0;
+
+            .radio,
+            .checkbox {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            //FIXME Dangerous definitions
+            .radio input[type="radio"],
+            .checkbox input[type="checkbox"] {
+                margin-top: 3px;
+                margin-left: $grid_gutter-width/2;
+            }
+        }
+    }
+}
+
+.sortable { //TODO Rename
+    cursor: pointer;
+
+    .list-hover-arrow {
+        display: none;
+    }
+
+    .rc-icon {
+        float: right;
+    }
+
+    &:hover {
+        .list-hover-arrow {
+            display: block;
+        }
+    }
+}
+
+.order-asc, .order-desc {
+    background: $gridHeaderSortBackground !important;
+}
+
+.grid-empty-list-message {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 150px;
+    color: $text-muted;
+    border-top: 1px solid $table-border-color;
+    margin-bottom: -1px;
+}
+
+.grid-blocked-list-container {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    top: 0;
+    left: 0;
+
+    .grid-blocked-list-message {
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        width: 200px;
+        margin-left: -100px;
+        border-radius: 6px;
+        border: 1px solid $mediumGrayColor;
+        background: $whiteColor url($imagesPath + "/loader_blue.gif") 50% 12px no-repeat;
+        padding: 50px 15px 15px 15px;
+        text-align: center;
+    }
+}
+
+.grid-container {
+    min-height: 400px;
+}
+
+.sorter-icon {
+    position: absolute;
+    right: $grid_gutter-width / 2;
+    top: $grid_gutter-width;
+    padding-left: $grid_gutter-width / 2;;
+}
+
+.grid-header-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

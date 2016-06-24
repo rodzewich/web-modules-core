@@ -1,0 +1,56 @@
+.rc-checkbox-group {
+    margin-bottom: 20px;
+
+    .rc-checkbox-group-icon {
+        cursor: pointer;
+    }
+
+    .rc-checkbox-group-header {
+        border-bottom: 1px solid $checkboxGroupHeaderBorderColor;
+        padding-bottom: 5px;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .checkbox {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+
+    &.opened {
+        .rc-checkbox-group-body {
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s;
+        }
+    }
+
+    &.collapsed {
+        .rc-checkbox-group-body {
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .rc-checkbox-group-body {
+        margin-top: 15px;
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.rc-checkbox-group[readOnly] {
+    .rc-checkbox {
+        cursor: auto;
+    }
+}

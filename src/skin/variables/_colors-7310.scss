@@ -1,0 +1,38 @@
+// Neutral colors
+
+$successColor: #66cc00;
+$successColorAlt: #57A708;
+
+$blackColor: #333333;
+$darkGrayColor: #666666;
+$mediumGrayColor: #e2e2e2;
+$lightGrayColor: #ececed;
+$lightestGrayColor: #f5f6f7;
+$whiteColor: #fff;
+
+// Telus Brand colors
+
+$primaryColor: #49196d;
+$primaryColorAlt: #8C68A6;
+$accentColor: $successColor;
+$accentColorAlt: $successColorAlt;
+
+// Secondary colors
+
+$secondaryColor: $lightGrayColor;
+$secondaryColorAlt: $mediumGrayColor;
+
+// Menu
+$menuLinkColor: $blackColor;
+$menuIconColor: $accentColor;
+$menuActiveIconColor: $accentColor;
+$menuBorderLeftColor: $accentColor;
+
+// Custom Controls
+$customControlsColor: $accentColor;
+$customControlsColorHover: $accentColor;
+$customControlsOutline: lighten($accentColor, 30%);
+
+// Import the rest of the colors
+
+@import 'colors';

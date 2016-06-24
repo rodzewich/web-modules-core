@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'rc-font';
+    src:    url('fonts/rc-font.eot?88ug88');
+    src:    url('fonts/rc-font.eot?88ug88#iefix') format('embedded-opentype'),
+        url('fonts/rc-font.woff2?88ug88') format('woff2'),
+        url('fonts/rc-font.ttf?88ug88') format('truetype'),
+        url('fonts/rc-font.woff?88ug88') format('woff'),
+        url('fonts/rc-font.svg?88ug88#rc-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="rc-icon-"], [class*=" rc-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'rc-font' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.rc-icon-drag-handler:before {
+    content: "\e991";
+}
+.rc-icon-group-public:before {
+    content: "\e984";
+}
+.rc-icon-add-new-widget:before {
+    content: "\e985";
+}
+.rc-icon-triangle-target-ticker:before {
+    content: "\e986";
+}
+.rc-icon-settings:before {
+    content: "\e987";
+}
+.rc-icon-time-recent-clock:before {
+    content: "\e988";
+}
+.rc-icon-duplicate-copy:before {
+    content: "\e989";
+}
+.rc-icon-dnd-unavailable-busy:before {
+    content: "\e98a";
+}
+.rc-icon-dnd-unavailable-busy2 .path1:before {
+    content: "\e98b";
+    color: rgb(0, 0, 0);
+}
+.rc-icon-dnd-unavailable-busy2 .path2:before {
+    content: "\e98c";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.rc-icon-exit-fullscreen:before {
+    content: "\e98d";
+}
+.rc-icon-fullscreen:before {
+    content: "\e98e";
+}
+.rc-icon-current-call:before {
+    content: "\e98f";
+}
+.rc-icon-current-call-fill:before {
+    content: "\e990";
+}
+.rc-icon-rc-icon-replace-orders:before {
+    content: "\e93f";
+}
+.rc-icon-setup-and-provision:before {
+    content: "\e954";
+}
+.rc-icon-icon_contract:before {
+    content: "\e944";
+}
+.rc-icon-icon_cost_center:before {
+    content: "\e945";
+}
+.rc-icon-icon_international_calling:before {
+    content: "\e947";
+}
+.rc-icon-icon_payment:before {
+    content: "\e949";
+}
+.rc-icon-icon_service_plan:before {
+    content: "\e981";
+}
+.rc-icon-icon_download:before {
+    content: "\e97f";
+}
+.rc-icon-icon_webinar_settings:before {
+    content: "\e92d";
+}
+.rc-icon-resync:before {
+    content: "\e92e";
+}
+.rc-icon-groups-others:before {
+    content: "\e93b";
+}
+.rc-icon-bandwidth-settings:before {
+    content: "\e952";
+}
+.rc-icon-setup-and-assign:before {
+    content: "\e951";
+}
+.rc-icon-forget-this-computer:before {
+    content: "\e950";
+}
+.rc-icon-forwardnumber:before {
+    content: "\e94e";
+}
+.rc-icon-transfernumber:before {
+    content: "\e94f";
+}
+.rc-icon-icon_meetings:before {
+    content: "\e948";
+}
+.rc-icon-icon_meetings_reports:before {
+    content: "\e980";
+}
+.rc-icon-icon_calendar:before {
+    content: "\e943";
+}
+.rc-icon-icon_my_webinar:before {
+    content: "\e94c";
+}
+.rc-icon-icon_ringcentral_rooms:before {
+    content: "\e94d";
+}
+.rc-icon-unassign:before {
+    content: "\e92f";
+}
+.rc-icon-Desktopapp:before {
+    content: "\e940";
+}
+.rc-icon-company-info:before {
+    content: "\e93a";
+}
+.rc-icon-phone-numbers:before {
+    content: "\e93c";
+}
+.rc-icon-phones-n-devices:before {
+    content: "\e93d";
+}
+.rc-icon-auto-receptionist:before {
+    content: "\e93e";
+}
+.rc-icon-icon_d3_add:before {
+    content: "\e97e";
+}
+.rc-icon-icon_d3_export:before {
+    content: "\e97d";
+}
+.rc-icon-icon_d3_save:before {
+    content: "\e97c";
+}
+.rc-icon-icon_d3_subscribe:before {
+    content: "\e935";
+}
+.rc-icon-logout:before {
+    content: "\e936";
+}
+.rc-icon-User-groups:before {
+    content: "\e938";
+}
+.rc-icon-Preview:before {
+    content: "\e932";
+}
+.rc-icon-apple:before {
+    content: "\e930";
+}
+.rc-icon-play:before {
+    content: "\e931";
+}
+.rc-icon-windows:before {
+    content: "\e933";
+}
+.rc-icon-download-meetings-desktop-app:before {
+    content: "\e934";
+}
+.rc-icon-download-meetings-mobile-app:before {
+    content: "\e937";
+}
+.rc-icon-download-meetings-outlook-plugin:before {
+    content: "\e939";
+}
+.rc-icon-delete-filled:before {
+    content: "\e941";
+}
+.rc-icon-filter:before {
+    content: "\e942";
+}
+.rc-icon-favorite-filled:before {
+    content: "\e97b";
+}
+.rc-icon-favorite:before {
+    content: "\e97a";
+}
+.rc-icon-phone:before {
+    content: "\e979";
+}
+.rc-icon-more-information:before {
+    content: "\e946";
+}
+.rc-icon-stop:before {
+    content: "\e94a";
+}
+.rc-icon-radio-button-selected:before {
+    content: "\e94b";
+}
+.rc-icon-freezed-ext:before {
+    content: "\e953";
+}
+.rc-icon-radio-button-unselected:before {
+    content: "\e955";
+}
+.rc-icon-dnd:before {
+    content: "\e956";
+}
+.rc-icon-lock-filled:before {
+    content: "\e957";
+}
+.rc-icon-chevron:before {
+    content: "\e958";
+}
+.rc-icon-chevron-up-big:before {
+    content: "\e959";
+}
+.rc-icon-chevron-right-big:before {
+    content: "\e95a";
+}
+.rc-icon-chevron-left-big:before {
+    content: "\e95b";
+}
+.rc-icon-chevron-down-big:before {
+    content: "\e95c";
+}
+.rc-icon-close:before {
+    content: "\e978";
+}
+.rc-icon-search:before {
+    content: "\e977";
+}
+.rc-icon-roles:before {
+    content: "\e976";
+}
+.rc-icon-shield:before {
+    content: "\e95d";
+}
+.rc-icon-templates:before {
+    content: "\e95e";
+}
+.rc-icon-users:before {
+    content: "\e95f";
+}
+.rc-icon-upload:before {
+    content: "\e960";
+}
+.rc-icon-add-big:before {
+    content: "\e961";
+}
+.rc-icon-add:before {
+    content: "\e962";
+}
+.rc-icon-back:before {
+    content: "\e963";
+}
+.rc-icon-checkbox-unselected:before {
+    content: "\2610";
+}
+.rc-icon-checkbox-mix:before {
+    content: "\e964";
+}
+.rc-icon-checkbox-mix-readonly:before {
+    content: "\e965";
+}
+.rc-icon-checkbox-selected:before {
+    content: "\e966";
+}
+.rc-icon-checkbox-selected-readonly:before {
+    content: "\2611";
+}
+.rc-icon-chevron-up-small:before {
+    content: "\e973";
+}
+.rc-icon-chevron-down-small:before {
+    content: "\e974";
+}
+.rc-icon-chevron-left-small:before {
+    content: "\e975";
+}
+.rc-icon-chevron-right-small:before {
+    content: "\e967";
+}
+.rc-icon-delete:before {
+    content: "\e968";
+}
+.rc-icon-download:before {
+    content: "\e969";
+}
+.rc-icon-edit:before {
+    content: "\e96a";
+}
+.rc-icon-lock:before {
+    content: "\e96b";
+}
+.rc-icon-mail:before {
+    content: "\e96c";
+}
+.rc-icon-more-horizontal:before {
+    content: "\e96d";
+}
+.rc-icon-more-vertical:before {
+    content: "\e96e";
+}
+.rc-icon-print:before {
+    content: "\e96f";
+}
+.rc-icon-user-disabled:before {
+    content: "\e970";
+}
+.rc-icon-user-enabled:before {
+    content: "\e971";
+}
+.rc-icon-not-activated:before {
+    content: "\e972";
+}
+

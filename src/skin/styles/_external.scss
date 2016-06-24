@@ -1,0 +1,30 @@
+@import "../variables/colors";
+
+.deviceOrders-management-injected {
+  display: inline-block;
+  width: 932px;
+  margin-left: 18px;
+  background-color: $externalDeviceOrdersManagementBackground;
+}
+
+.rc-modal-open {
+    overflow: hidden;
+}
+
+//FIXME
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none !important;
+}
+.bottom-border {
+    border-bottom: 1px solid $lightGrayColor;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.noBottomBorder {
+    border-bottom: none;
+}

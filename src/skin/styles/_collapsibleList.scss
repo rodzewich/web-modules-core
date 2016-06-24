@@ -1,0 +1,11 @@
+.collapsible-list {
+    .head-wrapper {
+        display: inline-block;
+    }
+    .toggle-list {
+        cursor: pointer;
+        padding-left: $grid-gutter-width;
+        padding-top: $grid-gutter-width;
+        vertical-align: top;
+    }
+}

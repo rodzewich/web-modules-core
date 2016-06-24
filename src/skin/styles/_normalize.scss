@@ -1,0 +1,72 @@
+& {
+    white-space: normal;
+    font: normal $font-size-base Helvetica, Calibri, Myriad, 'Lucida Sans', Arial, sans-serif;
+    color: $darkGrayColor;
+    line-height: $line-height-base;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input[type="file"] {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: $line-height-computed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $headerColor;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+ul, ol {
+    margin-bottom: 0;
+}
+
+hr {
+    margin-top: $default-padding;
+    margin-bottom: $default-padding;
+}
+
+.dl-horizontal {
+    dt {
+        text-align: left;
+    }
+}
+
+.rc-break-line {
+    white-space: normal;
+}
+
+.close {
+    opacity: 0.8;
+    font-weight: 100;
+    font-family: sans-serif;
+}

@@ -1,0 +1,36 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.rc-pagination {
+    display: inline-block;
+
+    .btn {
+        border-radius: 50% !important;
+        text-align: center;
+        .rc-icon {
+            margin: 0;
+        }
+        padding: 0 $default-padding / 4;
+    }
+
+    .btn.active {
+        background: $paginationActiveBackground;
+        font-weight: bold;
+        color: $paginationActiveColor;
+    }
+
+    .rc-icon {
+        margin-right: 0;
+    }
+
+    .control-label {
+        margin-right: $default-padding / 2;
+    }
+
+    .form-group {
+        margin-left: 0 !important;
+        margin-right: $default-padding / 2 !important;
+    }
+}

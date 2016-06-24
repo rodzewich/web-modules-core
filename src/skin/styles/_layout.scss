@@ -1,0 +1,6 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.col-border-right {
+    border-right: 1px solid $blockBorderColor;
+}

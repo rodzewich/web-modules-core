@@ -1,0 +1,83 @@
+@import "../variables/dimensions";
+@import "../variables/colors";
+@import "../rc-font/variables";
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    &:after {
+        @include rcIcon();
+        color: $customControlsColor;
+        position: relative;
+        top: -1px;
+    }
+    &:focus:after {
+        text-shadow: 0 0 7px $customControlsOutline, 0 0 7px $customControlsOutline, 0 0 7px $customControlsOutline, 0 0 7px $customControlsOutline;
+        background: $customControlsOutline;
+    }
+    &:hover:after {
+        color: darken($customControlsColor, 15%);
+    }
+    &:disabled:after {
+        color: $customControlsDisabledColor;
+    }
+}
+
+input[type="radio"] {
+    &:after {
+        content: $rc-icon-radio-button-unselected;
+    }
+    &:checked:after {
+        content: $rc-icon-radio-button-selected;
+    }
+}
+
+input[type="checkbox"] {
+    &:after {
+        content: $rc-icon-checkbox-unselected;
+    }
+    &:checked:after {
+        content: $rc-icon-checkbox-selected;
+    }
+    &:indeterminate:after {
+        content: $rc-icon-checkbox-mix;
+    }
+}
+
+.form-inline {
+    input[type="radio"],
+    input[type="checkbox"] {
+        &:after {
+            top: 1px;
+        }
+    }
+}
+
+.rc-select {
+    position: relative;
+    display: block;
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        padding-right: 20px; // compensate icon
+    }
+    &:after {
+        @include rcIcon();
+        content: $rc-icon-chevron-down-big;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        font-size: $font-size-base !important;
+        margin-top: -($font-size-base / 2);
+        pointer-events: none;
+    }
+}
+
+.form-inline .rc-select {
+    display: inline-block;
+}

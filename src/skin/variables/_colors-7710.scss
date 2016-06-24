@@ -1,0 +1,40 @@
+// BT Brand colors
+
+$primaryColor: #00528E;
+$primaryColorAlt: #80A9C7;
+
+// Neutral colors
+
+$blackColor: #333333;
+$darkGrayColor: #666666;
+$mediumGrayColor: #CECECE;
+$lightGrayColor: #ECECED;
+$lightestGrayColor: #F5F6F7;
+$whiteColor: #fff;
+
+$warningColor: #eaf1f6;
+$warningColorAlt: #a3c1d7;
+
+// Secondary colors
+
+$secondaryColor: $lightGrayColor;
+$secondaryColorAlt: $mediumGrayColor;
+
+// Custom colors
+
+// Menu
+$menuActiveLinkBackgroundColor: $primaryColor;
+$menuActiveLinkColor: $whiteColor;
+$menuActiveIconColor: $whiteColor;
+
+// Menu Sub
+$menuSubActiveLinkBackgroundColor: $primaryColor !default;
+$menuSubActiveLinkColor: $whiteColor !default;
+$menuSubActiveIconColor: $whiteColor !default;
+$menuSubHoverLinkBackgroundColor: $primaryColorAlt !default;
+$menuSubHoverLinkColor: $whiteColor !default;
+$menuSubHoverIconColor: $whiteColor !default;
+
+// Import the rest of the colors
+
+@import 'colors';

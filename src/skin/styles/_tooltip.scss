@@ -1,0 +1,10 @@
+@import "../variables/dimensions";
+
+.tooltip-inner {
+    text-align: left;
+    padding: $default-padding;
+
+    p:last-child {
+        margin: 0;
+    }
+}

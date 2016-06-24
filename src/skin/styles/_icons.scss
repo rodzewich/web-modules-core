@@ -1,0 +1,60 @@
+.rc-icon {
+    position: relative;
+    top: 1px;
+}
+
+.icon-extension-enabled {
+    color: $iconExtensionEnabled !important;
+}
+
+.icon-extension-disabled {
+    color: $iconExtensionDisabled !important;
+}
+
+.icon-extension-not-activated {
+    color: $iconExtensionNotActivated !important;
+}
+
+.icon-extension-freezed {
+    color: $iconExtensionFreezed !important;
+}
+
+.icon-phone-online {
+    color: $iconPhoneOnline !important;
+}
+
+.icon-phone-offline {
+    color: $iconPhoneOffline !important;
+}
+
+.icon-phone-order-in-progress {
+    color: $iconPhoneOrderInProgress !important;
+}
+
+.icon-phone-in-use {
+    color: $iconPhoneInUse !important;
+}
+
+.icon-phone-free {
+    color: $iconPhoneFree !important;
+}
+
+.rc-icon-right{
+    margin-left: $padding-base-horizontal;
+}
+
+@mixin rcIcon() {
+    font-family: 'rc-font' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="rc-icon-"], [class*=" rc-icon-"] {
+    line-height: $line-height-base;
+}

@@ -1,0 +1,55 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.modal-dialog {
+    margin-top: $grid-gutter-width * 14;
+}
+
+.modal-header {
+    background: $modalHeaderBackground;
+    border-radius: $border-radius-large $border-radius-large 0 0;
+}
+
+.modal-title {
+    font: 16px Helvetica, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.bordered-modal-title {
+    border-bottom: 1px solid $modal-header-border-color;
+    margin-right: -$default-padding;
+    margin-left: -$default-padding;
+    padding-bottom: $default-padding;
+}
+
+.modal-body {
+    padding: $default-padding
+}
+
+.modal-footer {
+    .btn + .btn {
+        margin-left: $grid-gutter-width;
+    }
+    .btn-default,
+    .btn-primary {
+        min-width: 91px;
+    }
+}
+
+.rc-popup-noPadding {
+    .modal-body {
+        padding: 0;
+    }
+}
+.rc-popup-noBottomPadding {
+    .modal-body {
+        padding-bottom: 0;
+    }
+}
+
+.rc-popup-noHeaderPadding {
+    .modal-header {
+        padding: 0;
+    }
+}

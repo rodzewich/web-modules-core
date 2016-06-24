@@ -1,0 +1,59 @@
+{
+  "name": "web-modules-core",
+  "version": "8.2.0",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://git.ringcentral.com:8888/web-modules/web-modules-core"
+  },
+  "private": true,
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --progress --display-modules",
+    "start": "./node_modules/.bin/webpack-dev-server --progress --hot"
+  },
+  "author": "RingCentral",
+  "license": "ISC",
+  "dependencies": {
+    "array.prototype.find": "1.0.0",
+    "array.prototype.findindex": "2.0.0",
+    "bluebird": "2.10.2",
+    "bootstrap-sass": "3.3.6",
+    "classnames": "2.2.3",
+    "format-message": "3.2.0",
+    "history": "2.0.0-rc2",
+    "lodash": "3.10.1",
+    "moment": "2.11.1",
+    "react": "0.14.6",
+    "react-addons-shallow-compare": "0.14.6",
+    "react-addons-test-utils": "0.14.6",
+    "react-bootstrap": "0.29.4",
+    "react-dom": "0.14.6",
+    "react-router": "2.0.0-rc5",
+    "react-router-bootstrap": "0.20.1",
+    "react-vis": "0.3.4",
+    "tiny-emitter": "1.0.1",
+    "validator": "4.5.1"
+  },
+  "devDependencies": {
+    "requirejs": "2.1.22",
+    "autoprefixer-loader": "3.1.0",
+    "babel-core": "5.8.34",
+    "babel-loader": "5.3.3",
+    "babel-plugin-react-transform": "1.1.1",
+    "chai": "3.5.0",
+    "css-loader": "0.19.0",
+    "file-loader": "0.8.4",
+    "json-loader": "0.5.4",
+    "node-libs-browser": "0.5.3",
+    "node-sass": "3.4.2",
+    "react-transform-catch-errors": "1.0.2",
+    "react-transform-hmr": "1.0.2",
+    "redbox-react": "1.2.0",
+    "sass-loader": "2.0.1",
+    "stats-webpack-plugin": "0.3.1",
+    "style-loader": "0.13.0",
+    "url-loader": "0.5.7",
+    "webpack": "1.12.12",
+    "webpack-dev-server": "1.14.1"
+  }
+}

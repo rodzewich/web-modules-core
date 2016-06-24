@@ -1,0 +1,30 @@
+.rc-block {
+    margin-bottom: $default-padding;
+}
+
+.rc-block-addTopOffset {
+    margin-top: $default-padding;
+}
+
+.rc-block-cancelTopOffset {
+    margin-top: -$default-padding;
+}
+
+.rc-block-cancelBottomOffset {
+    margin-bottom: -$default-padding;
+}
+
+.rc-block-cancelHorizontalOffset {
+    margin-left: -$default-padding;
+    margin-right: -$default-padding;
+}
+
+.rc-block-condensed {
+    margin-bottom: $default-padding / 2;
+}
+
+.rc-block-accent {
+    margin-top: $default-padding * 2;
+    margin-bottom: $default-padding * 2;
+}
+

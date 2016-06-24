@@ -1,0 +1,7 @@
+@import 'variables/colors-7310';
+@import 'styles';
+
+// Enable custom skin for system controls
+.bootstrap-rc {
+    @import "styles/formSkin";
+}

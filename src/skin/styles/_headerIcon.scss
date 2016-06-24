@@ -1,0 +1,15 @@
+.header-icon {
+    width: $header-icon-size !important;
+    height: $header-icon-size !important;
+    background-size: $header-icon-background-size $header-icon-background-size;
+    background-color: $header-icon-background-color;
+    background-position: center center !important;
+    border-radius: 50% !important;
+    cursor: default !important;
+    text-align: center;
+
+    .rc-icon {
+        font-size: $header-icon-font-size;
+        line-height: $header-icon-size !important;
+    }
+}

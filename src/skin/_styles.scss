@@ -1,0 +1,71 @@
+// RC Font
+
+$icomoon-font-path: 'rc-font/fonts' !default;
+@import "rc-font/style";
+
+// Common Variables
+
+@import 'variables/colors';
+@import 'variables/dimensions';
+
+// React Vis
+
+@import "~react-vis/main";
+
+// Main
+
+.bootstrap-rc {
+
+    // Bootstrap main file
+    @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+    // Normalization
+    @import "styles/normalize";
+
+    // Component styles
+    @import "styles/navbar";
+    @import "styles/menu";
+    @import "styles/tabPanel";
+    @import "styles/pagination";
+    @import "styles/popup";
+    @import "styles/gridRowActions";
+    @import "styles/button";
+    @import "styles/filter";
+    @import "styles/grid";
+    @import "styles/checkboxGroup";
+    @import "styles/panels";
+    @import "styles/block";
+    @import "styles/layout";
+    @import "styles/form";
+    @import "styles/storeSelectedRecordsSwitcher";
+    @import "styles/borderedList";
+    @import "styles/tooltip";
+    @import "styles/collapsibleList";
+    @import "styles/headerIcon";
+    //@import "styles/formSkin"; // Uncomment this to enable skin for all brands
+}
+
+// ATTENTION! Tooltip style should be global for correct work
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+
+// ATTENTION! Only truly non-namespaced things can exist here
+
+@import "styles/external";
+@import "styles/icons";
+
+// This is a fix for forms in IE
+_:-ms-input-placeholder,
+:root input[type="radio"]:after,
+:root input[type="checkbox"]:after,
+:root .rc-select:after {
+    display: none;
+}
+_:-ms-input-placeholder,
+:root input[type="radio"],
+:root input[type="checkbox"],
+:root .rc-select select {
+    -webkit-appearance: normal;
+    -moz-appearance: normal;
+    -ms-appearance: normal;
+    appearance: normal;
+}

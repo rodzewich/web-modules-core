@@ -1,0 +1,39 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.bordered-list {
+    padding: $default-padding 0;
+    border: 1px solid $borderedListBorderColor;
+    .bordered-list-item {
+        cursor: pointer;
+        padding: $grid-gutter-width;
+        &:first-child {
+            border-top: 1px solid $borderedListBorderColor;
+        }
+        border-bottom: 1px solid $borderedListBorderColor;
+        &:hover, &.active {
+            background: $borderedListItemBackgroundColor;
+        }
+    }
+
+    &.bordered-list-noTopBorder {
+        border-top: none;
+    }
+    &.bordered-list-noBottomBorder {
+        border-bottom: none;
+    }
+    &.bordered-list-noHorizontalBorders {
+        border-top: none;
+        border-bottom: none;
+    }
+    &.bordered-list-noLeftBorder {
+        border-left: none;
+    }
+    &.bordered-list-noRightBorder {
+        border-right: none;
+    }
+    &.bordered-list-noVerticalBorders {
+        border-left: none;
+        border-right: none;
+    }
+}

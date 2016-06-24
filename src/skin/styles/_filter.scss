@@ -1,0 +1,21 @@
+@import "icons";
+
+.rc-filter {
+    position: relative;
+
+    input {
+        padding-right: 30px;
+    }
+
+    &:after {
+        @include rcIcon();
+        content: $rc-icon-search;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        font-size: $font-size-base !important;
+        margin-top: -($font-size-base / 2);
+        pointer-events: none;
+        opacity: .75;
+    }
+}

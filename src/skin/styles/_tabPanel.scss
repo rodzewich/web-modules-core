@@ -1,0 +1,69 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+.nav-tabs {
+    @include clearfix();
+    border-bottom: 1px solid $nav-tabs-border-color;
+    padding: 0 $panel-body-padding;
+    margin-bottom: -1px;
+
+    &.rc-nav-noBorder {
+        border: 0;
+    }
+
+    &.rc-nav-centered {
+        text-align: center;
+        li {
+            margin-right: 2 * $default-padding;
+        }
+    }
+
+    > li {
+        &:last-child {
+            margin-right: 0;
+        }
+        background: transparent;
+        margin-right: $default-padding;
+        float: none;
+        display: inline-block;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        > a {
+            border: none;
+            background: transparent;
+            padding-left: $grid-gutter-width;
+            padding-right: $grid-gutter-width;
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                border: none;
+            }
+
+            strong, .rc-icon {
+                margin-right: 5px;
+            }
+        }
+
+        &.active {
+            a,
+            a:hover,
+            a:focus {
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid $component-active-bg;
+            }
+        }
+
+        &.success {
+            * {
+                color: $brand-success;
+            }
+        }
+    }
+}

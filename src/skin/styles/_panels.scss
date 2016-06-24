@@ -1,0 +1,35 @@
+.rc-panel-noPadding {
+    .panel-body {
+        padding: 0;
+    }
+}
+
+.rc-panel-noHeaderPadding {
+    .panel-heading {
+        padding: 0;
+    }
+}
+
+.rc-panel-smallHeaderPadding {
+    .panel-heading {
+        padding: 8px $default-padding;
+    }
+}
+
+.panel-title {
+    > * {
+        font-size: $font-size-base;
+    }
+}
+
+.panel-body {
+    min-height: 500px;
+    position: relative;
+}
+
+.panel-footer {
+    .btn-default,
+    .btn-primary {
+        min-width: 91px;
+    }
+}

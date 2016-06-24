@@ -1,0 +1,34 @@
+.navbar {
+    position: relative;
+
+    .btn:hover {
+        text-decoration: none;
+    }
+    .back-icon {
+        margin-left: -3px; // align icon
+    }
+}
+
+.navbar-left, .navbar-right {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-right {
+    margin-right: $default-padding - ($grid-gutter-width / 2) - $navbar-padding-horizontal; // will give double gutter, 5px is form padding
+}
+
+.navbar-brand {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font: lighter 18px $headings-font-family;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 1;
+}

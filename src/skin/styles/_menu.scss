@@ -1,0 +1,84 @@
+@import "../variables/colors";
+@import "../variables/dimensions";
+
+.rc-menu {
+    border-radius: 5px;
+    background-color: $menuBackgroundColor;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+        list-style-type: none;
+        a {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            font-size: 13px;
+            padding: 25px 25px 25px 50px;
+            color: $menuLinkColor;
+            background-repeat: no-repeat;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+            &.link-with-icon {}
+            &.active, &.active:hover {
+                background-color: $menuActiveLinkBackgroundColor;
+                color: $menuActiveLinkColor;
+                border-left-color: $menuBorderLeftColor;
+                .rc-menu-icon {
+                    color: $menuActiveIconColor;
+                }
+            }
+            &:hover {
+                border-left-color: $menuBorderLeftColor;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+    }
+
+    .rc-menu-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        vertical-align: sub;
+        font-size: 22px;
+        margin-top: -18px;
+        color: $menuIconColor;
+    }
+
+    &.rc-menu-sub {
+        border-radius: 0;
+        background-color: $menuSubBackgroundColor;
+        li {
+            a {
+                padding: 15px 15px 15px 40px;
+                color: $menuSubLinkColor;
+                background-repeat: no-repeat;
+                border-left: none;
+                border-radius: 2px;
+                &.active {
+                    background-color: $menuSubActiveLinkBackgroundColor;
+                    color: $menuSubActiveLinkColor;
+                    .rc-menu-icon {
+                        color: $menuSubActiveIconColor;
+                    }
+                }
+                &:hover:not(.active) {
+                    background-color: $menuSubHoverLinkBackgroundColor;
+                    color: $menuSubHoverLinkColor;
+                    .rc-menu-icon {
+                        color: $menuSubHoverIconColor;
+                    }
+                }
+            }
+        }
+
+        .rc-menu-icon {
+            font-size: 16px;
+            margin-top: -13px;
+            color: $menuSubIconColor;
+        }
+
+    }
+}

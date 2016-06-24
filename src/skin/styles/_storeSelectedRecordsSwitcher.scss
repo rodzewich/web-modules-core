@@ -1,0 +1,9 @@
+.store-selected-records-switcher {
+    strong, a{
+        padding-left: $padding-base-horizontal;
+        padding-right: $padding-base-horizontal;
+        &:first-child {
+          padding-left: 0;
+        }
+    }
+}

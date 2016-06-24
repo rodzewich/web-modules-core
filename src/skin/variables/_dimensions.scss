@@ -1,0 +1,58 @@
+$imagesPath: './images' !default;
+
+// Basic Dimensions
+
+$grid-gutter-width: 10px !default;
+$default-padding: $grid-gutter-width * 2 !default; // this is default 2G padding/margin in all mid-blocks & panels, etc
+$padding-base-horizontal: $grid-gutter-width !default;
+
+// Apply basics to real containers
+
+$line-height-base: 1.5 !default;
+$line-height-computed: $default-padding !default;
+$nav-link-padding: $default-padding $default-padding / 2 !default;
+$panel-heading-padding: $default-padding !default;
+$panel-body-padding: $default-padding !default;
+$panel-footer-padding: $grid-gutter-width * 1.5 $default-padding !default;
+$modal-title-padding: $default-padding !default;
+$modal-inner-padding: $grid-gutter-width * 1.5 $default-padding !default;
+$form-group-margin-bottom: 0 !default;
+$font-size-base: 13px;
+$headings-font-family: Helvetica, Arial, sans-serif;
+$headings-font-weight: lighter;
+$headings-line-height: inherit;
+$component-offset-horizontal: 140px;
+
+$tooltip-max-width: 300px;
+
+// Glyphicons
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/" !default;
+
+// Disabled cursor for form controls and buttons.
+$cursor-disabled: default !default;
+
+// Button
+$btn-border-radius-base: 2px !default;
+
+// Popup
+$modal-lg: 1000px !default;
+$modal-sm: 500px !default;
+
+// Alert
+$alert-padding: $default-padding;
+
+// HeaderIcon
+$header-icon-size: 68px !default;
+$header-icon-font-size: 32px !default;
+$header-icon-background-size: 48px !default;
+
+$table-cell-padding: 8px !default;
+$gridCellPaddingHorizontal: $table-cell-padding;
+$gridCellPaddingVertical: ($table-cell-padding * 1.5);
+
+
+// Original Bootstrap Vars & Mixins
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
