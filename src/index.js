@@ -109,6 +109,7 @@ export {Form} from './ui/form/Form';
 export {TextInput} from './ui/form/TextInput';
 export {TextArea} from './ui/form/TextArea';
 export {Checkbox} from './ui/form/Checkbox';
+export {DatePicker} from './ui/form/DatePicker';
 export {CheckboxGroup} from './ui/form/CheckboxGroup';
 export {Radio} from './ui/form/Radio';
 export {Select} from './ui/form/Select';
@@ -119,6 +120,7 @@ export {FormControl as FormInput} from './ui/form/FormControl'; //FIXME Remove l
 export {TextInputControl} from './ui/form/TextInputControl';
 export {TextAreaControl} from './ui/form/TextAreaControl';
 export {CheckboxControl} from './ui/form/CheckboxControl';
+export {DatePickerControl} from './ui/form/DatePickerControl';
 export {RadioControl} from './ui/form/RadioControl';
 export {SelectControl} from './ui/form/SelectControl';
 export {MultiSelect} from './ui/form/MultiSelect';
