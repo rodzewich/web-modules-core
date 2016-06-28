@@ -16,7 +16,8 @@ export class SelectControl extends FormControl {
 
     render() {
         
-        let {testAutomationId, children, ...props} = this.getPropsFromContext();
+        let {children, ...props} = this.getPropsFromContext();
+        let {testAutomationId} = this.props;
         
         return (
             <span className="rc-select">

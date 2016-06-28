@@ -12,14 +12,15 @@ export class TextAreaControl extends FormControl {
     // extends defaultProps from superclass
     static defaultProps = {
         ...FC.defaultProps,
-        testAutomationId: "textInput",
+        testAutomationId: "input",
         maxLength: 256
     };
 
     render() {
         
-        let {testAutomationId, maxLength, ...props} = this.getPropsFromContext();
-        
+        let {maxLength, ...props} = this.getPropsFromContext();
+        let {testAutomationId} = this.props;
+
         return (props.readOnly
                 ? <Static ref="input" {...props} data-test-automation-id={testAutomationId}>{props.value}</Static>
                 : <BSFormControl

@@ -11,7 +11,7 @@ export class CheckboxControl extends FormControl {
     // extends defaultProps from superclass 
     static defaultProps = {
         ...FC.defaultProps,
-        testAutomationId: 'checkbox'
+        testAutomationId: 'input'
     };
 
     getValue() {
@@ -40,7 +40,8 @@ export class CheckboxControl extends FormControl {
 
     render() {
 
-        var {testAutomationId, checked, readOnly, disabled, children, ...props} = this.getPropsFromContext();
+        let {checked, readOnly, disabled, children, ...props} = this.getPropsFromContext();
+        let {testAutomationId} = this.props;
 
         return (
             <Checkbox

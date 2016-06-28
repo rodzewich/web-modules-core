@@ -12,13 +12,14 @@ export class TextInputControl extends FormControl {
     // extends defaultProps from superclass
     static defaultProps = {
         ...FC.defaultProps,
-        testAutomationId: "textInput",
+        testAutomationId: "input",
         maxLength: 64
     };
 
     render() {
 
-        let {type, testAutomationId, ...props} = this.getPropsFromContext();
+        let {type, ...props} = this.getPropsFromContext();
+        let {testAutomationId} = this.props;
 
         type = type || 'text';
 

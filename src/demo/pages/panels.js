@@ -16,8 +16,7 @@ import {
     Radio,
     RadioControl,
     Table,
-    GridRowActions,
-    CheckboxGroup
+    GridRowActions
 } from "../../index";
 
 export default class Panels extends React.Component {
@@ -41,6 +40,12 @@ export default class Panels extends React.Component {
         let footer = <div>Footer</div>;
 
         return <div>
+            <Panel header={<h1>Devices</h1>}>
+                <div style={{textAlign: 'center', marginTop: '200px'}}>
+                    <h1>You don't have any devices.</h1>
+                    <p><Button bsSize="large" bsStyle="primary"><Icon name="add"/> Add New Device</Button></p>
+                </div>
+            </Panel>
             <Panel footer={footer} header={[<h1>Header</h1>, <div>Some text</div>]}>
 
                 <p>5 columns cannot be created in Bootstrap. There has to be either 4 or 6 of them.</p>
@@ -144,14 +149,18 @@ export default class Panels extends React.Component {
 
                 <Input label="Vertical group of radios (control)">
                     <div><RadioControl>Auto-Receptionist</RadioControl></div>
-                    <div><RadioControl><div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div></RadioControl></div>
+                    <div><RadioControl>
+                        <div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div>
+                    </RadioControl></div>
                 </Input>
 
                 <hr/>
 
                 <Input label="Group of inline radios">
                     <RadioControl inline>Auto-Receptionist</RadioControl>
-                    <RadioControl inline><div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div></RadioControl>
+                    <RadioControl inline>
+                        <div>Extension:<br/>Admin User, Ext. 101<br/><Button>Select Extension</Button></div>
+                    </RadioControl>
                 </Input>
 
             </Panel>

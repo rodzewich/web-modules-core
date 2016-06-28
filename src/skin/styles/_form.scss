@@ -57,6 +57,11 @@
     }
 }
 
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: ($default-padding);
+}
+
 .rc-form .rc-list-checkbox, .rc-list-checkbox,
 .rc-form .rc-list-radio, .rc-list-radio {
     margin-bottom: 0;

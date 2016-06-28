@@ -35,8 +35,11 @@ export class FormGroup extends FormControl {
             groupClassName,
             disabled,
             readOnly,
+            onChange, // to prevent double onChange -- extract and don't use in BSFormGroup props
             ...props // properly handle old-style props
         } = this.getPropsFromContext();
+
+        onChange = null;
 
         if (!validationState && bsStyle) {
             validationState = bsStyle;

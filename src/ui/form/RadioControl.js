@@ -11,7 +11,7 @@ export class RadioControl extends FormControl {
     // extends defaultProps from superclass
     static defaultProps = {
         ...FC.defaultProps,
-        testAutomationId: 'radio'
+        testAutomationId: 'input'
     };
 
     inputConverter(value) {
@@ -23,7 +23,8 @@ export class RadioControl extends FormControl {
 
     render() {
 
-        let {testAutomationId, children, ...props} = this.getPropsFromContext();
+        let {children, ...props} = this.getPropsFromContext();
+        let {testAutomationId} = this.props;
 
         return (
             <Radio
